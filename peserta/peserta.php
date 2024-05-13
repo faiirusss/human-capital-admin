@@ -445,6 +445,14 @@ $peserta = query("SELECT * FROM peserta ORDER BY id desc LIMIT $awalData, $jumla
                     <input type="text" class="form-control" id="nama" name="nama">
                 </div>            
                 <div class="mb-3 col-md-5">
+                    <label for="domisili" class="form-label">Domisili Asal</label>
+                    <input type="text" class="form-control" id="domisili" name="domisili">
+                </div>            
+                <div class="mb-3 col-md-7">
+                    <label for="telepon" class="form-label">Telepon</label>
+                    <input type="text" class="form-control" id="telepon" name="telepon">
+                </div>            
+                <div class="mb-3 col-md-5">
                     <label for="nim" class="form-label">Nim</label>
                     <input type="text" class="form-control" id="nim" name="nim">
                 </div>            

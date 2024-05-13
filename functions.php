@@ -25,6 +25,8 @@ function create($data)
 
   $nama = $data["nama"];
   $nim = $data["nim"];
+  $domisili = $data["domisili"];
+  $telepon = $data["telepon"];
   $email = $data["email"];
   $presensi = $data["presensi"];
   $unitkerja = $data["unitkerja"];
@@ -37,13 +39,15 @@ function create($data)
   $query = "INSERT INTO peserta VALUES
     ('', 
     '$nama', 
-    '$email',
     '$nim',
+    '$domisili',
+    '$telepon',
     '$presensi',  
     '$unitkerja',  
     '$asalinstansi', 
     '$jurusan', 
     '$pembimbing',
+    '$email',
     '$awalPeriode',
     '$akhirPeriode')";
 
@@ -69,6 +73,8 @@ function update($data)
   $presensi = $data["presensi"];
   $nama = $data["nama"];
   $nim = $data["nim"];
+  $domisili = $data["domisili"];
+  $telepon = $data["telepon"];
   $email = $data["email"];
   $unitkerja = $data["unitkerja"];
   $asalinstansi = $data["instansi"];
@@ -80,6 +86,8 @@ function update($data)
   $query = "UPDATE peserta SET
     nama = '$nama',
     nim = '$nim',
+    domisili = '$domisili',
+    telepon = '$telepon',
     presensi = '$presensi',
     unitkerja = '$unitkerja',
     instansi = '$asalinstansi',

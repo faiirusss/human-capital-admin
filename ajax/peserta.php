@@ -52,7 +52,13 @@ $peserta = query($query);
                             $date = date("Y-m-d H:i:s", $finish);
                           ?>
                           <td class="cell"><span class="<?= ($tanggal < $date) ? 'badge bg-success' : 'badge bg-danger' ?>"><?= ($tanggal < $date) ? 'Aktif' : 'Non Aktif' ?></span></td>
-                          <td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+                          <td class="cell">
+                            <ion-icon name="ellipsis-vertical-outline" class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></ion-icon>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="detail.php?id=<?= $row['id'] ?>">Detail</a></li>
+                                <li><a class="dropdown-item delete-item" href="delete.php?id=<?= $row['id'] ?>" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">Delete</a></li>
+                            </ul>
+                          </td>
                         </tr>	
                         <?php $no++; endforeach; ?>                       
                       </tbody>
