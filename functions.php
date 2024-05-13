@@ -23,10 +23,10 @@ function create($data)
 {
   global $conn;
 
-  $presensi = $data["presensi"];
   $nama = $data["nama"];
   $nim = $data["nim"];
   $email = $data["email"];
+  $presensi = $data["presensi"];
   $unitkerja = $data["unitkerja"];
   $asalinstansi = $data["instansi"];
   $jurusan = $data["jurusan"];
@@ -37,13 +37,13 @@ function create($data)
   $query = "INSERT INTO peserta VALUES
     ('', 
     '$nama', 
+    '$email',
     '$nim',
     '$presensi',  
     '$unitkerja',  
     '$asalinstansi', 
     '$jurusan', 
     '$pembimbing',
-    '$email',
     '$awalPeriode',
     '$akhirPeriode')";
 
